@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Diabetes predictor website</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  
+  <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css'>
+  <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+  <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+  <link href="../static/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="../static/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="../static/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  
+  
+  {% comment %} Vendor CSS Files {% endcomment %}
+  {% comment %} <link href="static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="static/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  {% comment %} <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon"> {% endcomment %}
+  {% comment %} <link rel="stylesheet" href="static/libs/glightbox/css/glightbox.min.css"> {% endcomment %}
+    
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <!-- Template Main CSS File -->
+  <link href="../static/style1.css" rel="stylesheet">
+ 
+
+</head>
+
+<body>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+
+  <!-- ======= Styling ======= -->
+  {% comment %} <style>
+      
+    </style> {% endcomment %}
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center">
+    <div class="container d-flex align-items-center">
+
+      <div class="logo me-auto" >
+        <h1><a href="#">DiaCare</a></h1>
+      </div>
+
+      <nav id="navbar" class="navbar order-last order-lg-0" >
+        <ul>
+          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+          <li><a class="nav-link scrollto" href="#about">About Diabetes</a></li>
+          <li><a class="nav-link scrollto" href="#predict">Predict</a></li>
+          <li><a class="nav-link scrollto " href="#riskfactors">Risk Factors</a></li>
+          <li><a class="nav-link scrollto" href="#bot">Health bot</a></li>
+          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+          
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav>
+      {% if messages %}
+        {% for message in messages %}
+          <div class="alert alert-{{ message.tags }} alert-dismissible fade show my-0" role="alert"><strong>{{ message }}</strong>
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div> 
+        {% endfor %}
+      {% endif %}
+      
+  </header><!-- End Header -->
+
+  ======= Hero Section =======
+  <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
+    <div class="container text-center text-md-left" data-aos="fade-up">
+      <h1>Welcome to <span>Diabetes Predictor</span></h1>
+      <h2>Get ahead of diabetes with our predictive tool.</h2>
+      
+      <a href="#predict" class="btn-get-started scrollto">Start</a>
+    </div>
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+    <!-- ======= What We Do Section ======= -->
+    <section id="what-we-do" class="what-we-do">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>What We Do</h2>
+          <p>We provide a personalized diabetes risk assessment tool that calculates your risk score based on factors such as age, family history, lifestyle, and health history. </p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+            <div class="icon-box">
+              <div class="icon"><i class="bi bi-pc-display-horizontal"></i></div>
+              <h4><a href="">Advance ML Algorithms</a></h4>
+              <p>Our algorithm is backed by scientific research, providing you with an accurate prediction of your risk for developing diabetes</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
+            <div class="icon-box">
+              <div class="icon"><i class="bi bi-chat-dots"></i></div>
+              <h4><a href="">Expert Guidance</a></h4>
+              <p>We also offer educational resources on diabetes prevention, symptoms, diagnosis, and management, as well as support for those who have been diagnosed with diabetes.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
+            <div class="icon-box">
+              <div class="icon"><i class="bi bi-check2-all"></i></div>
+              <h4><a href="">Risk Assessment</a></h4>
+              <p>Our goal is to empower individuals to take control of their health and reduce their risk of developing type 2 diabetes.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End What We Do Section -->
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-lg-6">
+            <img src="../static/About.jpg" class="img-fluid" alt="">
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0">
+            <h3>About Diabetes</h3>
+            <p>
+              Diabetes is a chronic condition that affects how your body processes blood sugar, also known as glucose. Glucose is an essential source of energy for the body's cells, but it needs insulin, a hormone produced by the pancreas, to enter the cells. In people with diabetes, their body either does not produce enough insulin or cannot use insulin effectively, leading to high levels of glucose in the bloodstream.</p>
+            <ul>
+              <li><i class="bx bx-check-double"></i> There are two main types of diabetes: Type 1 and Type 2.</li>
+              {% comment %} <li><i class="bx bx-check-double"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li> {% endcomment %}
+            </ul>
+            <div class="row icon-boxes">
+              <div class="col-md-6">
+                {% comment %} <i class="bi bi-1-square-fill"></i> {% endcomment %}
+                <h4>Type 1</h4>
+                <p>Type 1 diabetes,also known as juvenile diabetes,is an autoimmune disease in which the body does not produce enough insulin.</p>
+              </div>
+              <div class="col-md-6 mt-4 mt-md-0">
+                {% comment %} <i class="bx bx-cube-alt"></i> {% endcomment %}
+                <h4>Type 2</h4>
+                <p>Type 2 diabetes is a condition in which the body either does not produce enough insulin or cannot use insulin effectively.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Section -->
+
+    
+
+    <!-- ======= Services Section ======= -->
+    <section id="predict" class="section-bg">
+      {% comment %} <div class="main"> {% endcomment %}
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Diabetes risk assessment tool</h2>
+          <p>Please enter the following values:</p>
+        </div>
+        {% comment %} <h1>Please enter the following values:</h1> {% endcomment %}
+        <form action="result">
+          <div style="display: flex; margin: auto; width: 80%">
+            <div class="col">
+              <div class="box_1">
+                <p>Pregnancies</p>
+                <input type="text" name="n1" />
+              </div>
+              <div class="box_1">
+                <p>Glucose</p>
+                <input type="text" name="n2" />
+              </div>
+              <div class="box_1">
+                <p>BloodPressure</p>
+                <input type="text" name="n3" />
+              </div>
+              <div class="box_1">
+                <p>DiabetesPedigreeFunction</p>
+                <input type="text" name="n7" />
+              </div>
+            </div>
+            <div class="col">
+              <div class="box_1">
+                <p>SkinThickness</p>
+                <input type="text" name="n4" />
+              </div>
+              <div class="box_1">
+                <p>Insulin</p>
+                <input type="text" name="n5" />
+              </div>
+              <div class="box_1">
+                <p>BMI</p>
+                <input type="text" name="n6" />
+              </div>
+              <div class="box_1">
+                <p>Age</p>
+                <input type="text" name="n8" />
+              </div>
+            </div>
+          </div>
+
+          <div class="row" style="width: 200px; margin: auto">
+            <input type="submit" class="predict-button" value="PREDICT" />
+          </div>
+        </form>
+        <div class="row result-row box_1" >
+          <h3>{{result2}}</h3>
+       
+        </div>
+      </div>  
+      </div>
+    </section><!-- End Services Section -->
+
+   <!-- ======= Risk Factor Section ======= -->
+   <section id="riskfactors" class="services section-bg">
+    <div class="container">
+
+      <div class="section-title">
+        <h2>Risk Factors</h2>
+        
+        <p>(It's important to note that having one or more risk factors does not mean that you will definitely develop diabetes. However, it's important to be aware of your risk factors and take steps to reduce your risk of developing the condition.) </p>
+        <p>There are several risk factors that increase your chances of developing diabetes, including:<p>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6">
+          <div class="icon-box">
+            <i class="bi bi-arrow-right-circle-fill"></i>
+            <h4><a href="#">Family history</a></h4>
+            <p> If you have a parent, sibling or other close relative with diabetes, you are at higher risk of developing the condition yourself.
+
+            </p>
+          </div>
+        </div>
+        <div class="col-md-6 mt-4 mt-lg-0">
+          <div class="icon-box">
+            <i class="bi bi-arrow-right-circle-fill"></i>
+            <h4><a href="#">Age</a></h4>
+            <p>The risk of developing type 2 diabetes increases as you get older, especially after age 45.</p>
+          </div>
+        </div>
+        <div class="col-md-6 mt-4">
+          <div class="icon-box">
+            <i class="bi bi-arrow-right-circle-fill"></i>
+            <h4><a href="#">Sedentary lifestyle</a></h4>
+            <p>Lack of physical activity or a sedentary lifestyle can increase your risk of developing type 2 diabetes.</p>
+          </div>
+        </div>
+        <div class="col-md-6 mt-4">
+          <div class="icon-box">
+            <i class="bi bi-arrow-right-circle-fill"></i>
+            <h4><a href="#">Obesity</a></h4>
+            <p>Being overweight or obese increases your risk of developing type 2 diabetes because excess body fat can affect how your body uses insulin.</p>
+          </div>
+        </div>
+        <div class="col-md-6 mt-4">
+          <div class="icon-box">
+            <i class="bi bi-arrow-right-circle-fill"></i>
+            <h4><a href="#">High blood pressure</a></h4>
+            <p>Having high blood pressure can increase your risk of developing type 2 diabetes by damaging the blood vessels and making it harder for your body to use insulin.</p>
+          </div>
+        </div>
+        <div class="col-md-6 mt-4">
+          <div class="icon-box">
+            <i class="bi bi-arrow-right-circle-fill"></i>
+            <h4><a href="#">Gestational diabetes</a></h4>
+            <p>If you had gestational diabetes during pregnancy, you are at higher risk of developing type 2 diabetes later in life.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section><!-- End Services Section -->
+
+    <!-- ======= Testimonials Section ======= -->
+    <section id="bot" class="testimonials section-bg">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Healthbot</h2>
+       
+        </div>
+
+    <iframe src='https://webchat.botframework.com/embed/healthbot-f6g66b7?s=pthR9jHbN2A.bKztPr5hqDmBhYaSbppocqwqPGQ9JkH91yk8U6FBSvI' style='min-width: 400px; width: 100%; min-height: 500px;'></iframe> 
+      
+    </section><!-- End Testimonials Section -->
+
+    
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact section-bg">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Contact</h2>
+          <p>Reach Us Here</p>
+        </div>
+
+        <div class="row mt-5 justify-content-center">
+
+          <div class="col-lg-10">
+
+            <div class="info-wrap">
+              <div class="row">
+                <div class="col-lg-4 info">
+                  <i class="bi bi-geo-alt"></i>
+                  <h4>Location:</h4>
+                  <p>Mumbai, India</p>
+                </div>
+
+                <div class="col-lg-4 info mt-4 mt-lg-0">
+                  <i class="bi bi-envelope"></i>
+                  <h4>Email:</h4>
+                  <p>info@example.com</p>
+                </div>
+
+                <div class="col-lg-4 info mt-4 mt-lg-0">
+                  <i class="bi bi-phone"></i>
+                  <h4>Call:</h4>
+                  <p>+1 (555) 123-4567</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="row mt-5 justify-content-center">
+          <div class="col-lg-10">
+            <form action="/home3" method="post" role="form" >
+              <div class="row">
+                {% csrf_token %}
+                <div class="col-md-6 form-group">
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                </div>
+                <div class="col-md-6 form-group mt-3 mt-md-0">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                </div>
+              </div>
+              <div class="form-group mt-3">
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+              </div>
+              <div class="form-group mt-3">
+                <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+              </div>
+              {% comment %} <div class="my-3">
+                <div class="loading">Loading</div>
+                <div class="error-message"></div>
+                <div class="sent-message">Your message has been sent. Thank you!</div>
+              </div>  {% endcomment %}
+              <br>
+              <div class="text-center"><button class="predict-button" type="submit">Send Message</button></div>
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Contact Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h3>DIACARE</h3>
+            <p>
+              Mumbai,India<br>
+              {% comment %} New York, NY 535022<br>
+              United States <br><br> {% endcomment %}
+              <strong>Phone:</strong> +1 (555) 123-4567<br>
+              <strong>Email:</strong> info@example.com<br>
+            </p>
+          </div>
+
+          <div class="col-lg-2 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#hero">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#about">About Diabetes</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#predict">Predict</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#bot">HealthBot</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+
+         
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container d-md-flex py-4">
+
+      <div class="me-md-auto text-center text-md-start">
+        <div class="copyright">
+          &copy; Copyright <strong><span>DiaCare</span></strong>. All Rights Reserved
+        </div>
+        <div class="credits">
+          
+          Designed by Simran
+          
+        </div>
+      </div>
+      
+       <a href="#" style="padding: 20px;" class="fa fa-facebook"></a>
+       <a href="#" style="padding: 20px;" class="fa fa-twitter"></a>
+       <a href="#" style="padding: 20px;" class="fa fa-instagram"></a>
+       
+      
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  
+
+  <!-- Template Main JS File -->
+  <script src="static/js/main.js"></script> 
+
+
+</body>
+
+</html>
