@@ -25,6 +25,6 @@ Project Link(Github Link):https://github.com/SimranKachle/Future_Ready_Talent_Pr
 - Web App
 - Django
 - Bootstrap
-- Machine Learning
+
 
 
