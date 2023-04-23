@@ -21,7 +21,7 @@ from DiabetesPredictor import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',include('home.urls')),
-    path('home3/result/',views.result),
+    # path('home3/result/',views.result),
     # path('home3/result/',views.result),
     # path('home3/result/',views.result),
 ]
