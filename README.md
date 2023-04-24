@@ -2,6 +2,7 @@ Project Link(Github Link):https://github.com/SimranKachle/Future_Ready_Talent_Pr
 
 
 **Website URL :** - https://dia-care.azurewebsites.net/
+**Demo Video :** - https://share.vidyard.com/watch/z34oG2JceJ8zsCSbtGSjtB?
 
 # ✨ DiaCare- Your Personal Advisor for Diabetes Risk Prediction ✨
 
